@@ -1,0 +1,80 @@
+.education{
+    &-2{
+        .heading{
+            display: flex;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            align-items: center;
+            justify-content: start;
+            .icon{
+                font-size: 26px;
+            }
+        }
+        .edu{
+            &-1{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding-left: 30px;
+                text-transform: capitalize;
+                z-index: 1;
+                name{
+                    font-size: 17px;
+                }
+                small{
+                    font-size: 14px;
+                    font-weight: 600;
+                    opacity: 0.8;
+                }
+                span{
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    gap: 5px;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 5px;
+                    right: 0;
+                    bottom: 0;
+                    top: 20px;
+                    border-left: 3px solid aqua;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: -1px;
+                    bottom: 90%;
+                    top: 5px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border: 3px solid aqua;
+                }
+                &:hover::after{
+                    background-color: aqua;
+
+                }
+            }
+        }
+    }
+    @media(max-width: 1000px){
+        .heading{
+            display: flex;
+            justify-content: center;
+        }
+        .row{
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            .edu{
+                width: fit-content;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.title{
+    // line-height: 30px;
+    h4{
+        font-weight: 700;
+    }
+    p{
+        font-weight: 800;
+        color: rgb(55, 28, 28);
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        &::before{
+            content: '-----------';
+            font-size: 10px;
+            min-width: 1px;
+            border-top: 1px solid aqua;
+            height: 8px;
+            color: white;
+        }
+        &::after{
+            content: '-----------';
+            font-size: 10px;
+            min-width: 1px;
+            border-top: 1px solid aqua;
+            height: 8px;
+            color: white;
+        }
+    }
+}

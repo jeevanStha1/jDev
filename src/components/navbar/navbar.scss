@@ -1,0 +1,140 @@
+.Navbar {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+
+    // background-color: aqua;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+
+    &-left {
+        justify-content: left;
+
+        .logo {
+            height: 80px;
+            object-fit: cover;
+        }
+    }
+
+    &-right {
+        display: flex;
+        list-style: none;
+        justify-content: end;
+        flex-wrap: wrap;
+        gap: 6%;
+        font-weight: 700;
+
+        .navLink {
+            line-height: 20px;
+            color: #fff;
+
+            
+        }
+        .nav-link{
+            &::after {
+                font-family: "fontAweasome";
+                display: block;
+                content: '\25CF';
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .menu-icon {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        width: fit-content;
+        height: 100%;
+        display: none;
+        align-items: center;
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            right: 0;
+            top: 100px;
+            width: 50%;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            li{
+                cursor: pointer;
+            }
+            .nav-link{
+                color: aqua !important;
+            }
+        }
+        @media(max-width: 768px){
+            .mobile-menu{
+                top: 70px;
+            }
+        }
+    }
+
+    @media(max-width: 800px) {
+        .container {
+            min-width: 95% !important;
+        }
+
+        &-right {
+            gap: 10px;
+            display: none;
+        }
+        .menu-icon{
+            display: flex;
+        }
+    }
+}
+@media(max-width: 768px){
+    .Navbar{
+        height: 70px;
+        &-left{
+            .logo{
+                height: 55px;
+            }
+        }
+    }
+}
+
+.Navbar.active {
+    background-color: white;
+    animation: slide 0.3s;
+
+    @keyframes slide {
+        from {
+            height: 0px;
+            opacity: 0;
+        }
+
+        to {
+            height: 100px;
+            opacity: 1;
+        }
+    }
+
+}
+
+.Navbar.noActive {
+    background-color: transparent;
+    animation: back 0.3s;
+
+    @keyframes back {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}

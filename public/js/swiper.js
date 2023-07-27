@@ -1,0 +1,1 @@
+document.querySelector('.mySwiper').computedStyleMap.display='none';

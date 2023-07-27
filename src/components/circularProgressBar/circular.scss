@@ -1,0 +1,27 @@
+.skills-item{
+
+    width: 150px;
+}
+.circularProgress {
+}
+@media(max-width:600px) {
+    .circularProgress {
+        width: 120px;
+        display: none;
+        span{
+            font-size: 20px !important;
+        }
+    }
+}
+@media(max-width:600px) {
+    .skills-item{
+        width: 120px;
+    }
+    .circularProgress {
+        width: 100px;
+        display: none;
+        span{
+            font-size: 16px !important;
+        }
+    }
+}

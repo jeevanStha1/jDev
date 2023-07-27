@@ -1,0 +1,97 @@
+.project {
+    &__data {
+
+        &__item {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            border-width: 2px;
+            border-style: solid;
+            border-image: linear-gradient(to right, aqua, darkorchid) 1;
+
+            &__left {
+                width: 30%;
+
+                .bottom {
+                    display: flex;
+                    gap: 10px;
+
+                    button {
+                        padding: 5px 10px;
+                    }
+
+                }
+            }
+
+            &__right {
+                width: 70%;
+                height: 100%;
+
+                .img {
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                        height: auto;
+                    }
+                }
+            }
+            @media(max-width: 1000px){
+                &__left{
+                    width: 40%;
+                }
+                &__right{
+                    width: 60%;
+                }
+            }
+        }
+        @media(max-width: 770px){
+            &__item{
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                &__left{
+                    width: 100%;
+                    order: 2;
+                }
+                &__right{
+                    width: 100%;                                                                            
+                    order: 1;
+                    .img{
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
+        .swiper{
+            position: relative;
+            // padding: 70px 0;
+            .swiper-button-prev{
+                position: absolute;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: end;
+                &::after{
+                    font-size: 30px;
+                }
+            }
+            .swiper-button-next{
+                position: absolute;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: end;
+                &::after{
+                    font-size: 30px;
+                }
+            }
+            .swiper-wrapper{
+                padding-bottom: 50px;
+            }
+
+        }
+    }
+}
