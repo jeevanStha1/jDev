@@ -18,7 +18,7 @@ import Services from "../../components/services/Services";
 function Home() {
   return (
     <div className="Home" id="Home">
-      {/* <div className="section-1">
+      <div className="section-1">
         <div className="container w-75 m-auto">
           <div className="section-1-top d-flex flex-column align-items-center ">
             <div className="section-1-top-1">
@@ -49,7 +49,7 @@ function Home() {
             <i class="fa-solid fa-angle-down"></i>
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="section-2">
         <About />
       </div>

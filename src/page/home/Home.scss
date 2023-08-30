@@ -78,56 +78,94 @@
             position: relative;
 
             .section-1-top {
+                display: flex;
                 align-items: center;
                 position: absolute;
                 top: 40%;
                 transform: translateY(-40%);
+                width: 100%;
                 // gap: 15%;
 
                 &>div {
                     margin: 10px 0;
-                    display: flex;
-                    align-items: center;
+                    // display: flex;
+                    // align-items: center;
                     text-align: center;
                     color: #fff;
                     min-height: 50px;
+                    width: 100%;
 
                     // max-height: 80px;
                     .animation {
+                        width: 800px;
                         font-size: 70px;
+                        display: flex;
+                       align-items: center;
+                    //    justify-content: center;
+                        // text-align: center;
+                        position: relative;
+                        height: 100px;
+                        &>span{
+                            // text-align: center;
+                            // width: 100%;
+                            display: flex;
+                        }
+
                         &-1{
-                            animation: change1 7s infinite;
-                            display: inline-block;
+                            animation: change1 10s steps(100) infinite;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            position: absolute;
+                            left: 150px;
                         }
                         &-2{
-                            animation: change2 7s infinite;
-                            display: none;
+                            animation: change2 10s steps(100) infinite;
+                            overflow: hidden;
+                            // height: 100px;
+                            white-space: nowrap;
+                            position: absolute;
+                            left: 150px;
                         }
                         @keyframes change1 {
                             0%{
-                                opacity: 1;
+                               width: 0%;
+                               opacity: 0;
+                            }
+                            25%{
+                               width: 550px;
+                               opacity: 1;
                             }
                             50%{
+                                width: 0%;
                                 opacity: 0;
+                            }
+                            75%{
                                 display: none;
                             }
                             100%{
-                                opacity: 1;
+                                display: none;
                             }
                         }
                         @keyframes change2 {
                             0%{
                                 display: none;
-                                opacity: 0;
-                            }
-                            50%{
-                                opacity: 1;
-                                display: inline-block;
-                            }
-                            100%{
+                             }
+                             25%{
                                 display: none;
-                                opacity: 0;
+                             }
+                             50%{
+                                width: 0%;
                             }
+                            75%{
+                                 width: 400px;
+                                 opacity: 1;
+
+                             }
+                             100%{
+                                 width:0%;
+                                 opacity: 0;
+                                 
+                             }
                         }
                       }
                       
