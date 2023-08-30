@@ -25,14 +25,16 @@ function Navbar() {
     "Blog",
     "Services",
   ];
-  const isActive = () => {
-    window.scrollY > 20 ? setActive(true) : setActive(false);
-  };
 
   useEffect(() => {
+    // const isActive = () => {
+    //   ;
+    // };
     // window.addEventListener("scroll", isActive);
     return () => {
-      window.addEventListener("scroll", isActive);
+      window.addEventListener("scroll", () => {
+        window.scrollY > 20 ? setActive(true) : setActive(false);
+      });
     };
   });
   return (
@@ -50,6 +52,7 @@ function Navbar() {
             <li
               className={`navLink ${active && "text-dark"} `}
               onClick={activeLink}
+              key={idx}
             >
               <a
                 href={`#${link}`}
@@ -87,7 +90,8 @@ function Navbar() {
                 <li
                   className={`mobile-menu-link fw-bold ${
                     !active && "text-white"
-                  }`} onClick={activeLink}
+                  }`}
+                  onClick={activeLink}
                 >
                   <a
                     href={`#${item}`}
