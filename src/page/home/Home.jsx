@@ -16,6 +16,7 @@ import NewsLetter from "../../components/newsletter/NewsLetter";
 import Services from "../../components/services/Services";
 
 function Home() {
+  
   return (
     <div className="Home" id="Home">
       <div className="section-1">

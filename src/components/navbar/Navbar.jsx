@@ -3,8 +3,7 @@ import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 import "./navbar.scss";
 
-function Navbar() {
-  const [active, setActive] = useState(false);
+function Navbar({active,setActive}) {
   const [showMenu, setShowMenu] = useState(false);
   const [click, setClick] = useState(null);
 
@@ -25,18 +24,6 @@ function Navbar() {
     "Blog",
     "Services",
   ];
-
-  useEffect(() => {
-    // const isActive = () => {
-    //   ;
-    // };
-    // window.addEventListener("scroll", isActive);
-    return () => {
-      window.addEventListener("scroll", () => {
-        window.scrollY > 20 ? setActive(true) : setActive(false);
-      });
-    };
-  });
   return (
     <div className={active ? "Navbar active border-bottom" : "Navbar noActive"}>
       <div className="container w-75 m-auto row  justify-content-between align-items-center py-2">
