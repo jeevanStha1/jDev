@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 import "./navbar.scss";
@@ -6,6 +6,7 @@ import "./navbar.scss";
 function Navbar({active,setActive}) {
   const [showMenu, setShowMenu] = useState(false);
   const [click, setClick] = useState(null);
+  const divref = useRef(null);
 
   const activeLink = (e) => {
     const id = e.target;
@@ -24,6 +25,19 @@ function Navbar({active,setActive}) {
     "Blog",
     "Services",
   ];
+
+  useEffect(()=> {
+    const handleClickOutside = (event) => {
+      if(!divref.current || divref.current.contains(event.target)){
+        // setShowMenu(true);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () =>
+    {
+      document.removeEventListener('click', handleClickOutside);
+  }
+  },[]);
   return (
     <div className={active ? "Navbar active border-bottom" : "Navbar noActive"}>
       <div className="container w-75 m-auto row  justify-content-between align-items-center py-2">
@@ -63,7 +77,7 @@ function Navbar({active,setActive}) {
             />
           )}
           {showMenu && (
-            <ul
+            <ul ref={divref}
               className={`mobile-menu p-3 ${
                 active && "border-start border-bottom"
               }`}
@@ -78,7 +92,10 @@ function Navbar({active,setActive}) {
                   className={`mobile-menu-link fw-bold ${
                     !active && "text-white"
                   }`}
-                  onClick={activeLink}
+                  onClick={() => {
+                    activeLink;
+                    setShowMenu(false)
+                  }}
                 >
                   <a
                     href={`#${item}`}
