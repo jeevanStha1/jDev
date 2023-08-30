@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css';
 import Home from './page/home/Home';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer';
 
 function App() {
   const [active, setActive] = useState(false);
+
 
   const Layout = () => {
     return (

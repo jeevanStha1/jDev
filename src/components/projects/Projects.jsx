@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 function Projects() {
   return (
@@ -49,22 +50,22 @@ function Projects() {
                     </p>
                   </div>
                   <div className="bottom">
-                    <button>View Live</button>
-                    <button>Source Code</button>
+                    <a href={'https://sthajeevan.com.np'} target="_blank"><button>View Live</button></a>
+                    <a href={'https://github.com/Jeevan1/FarmManagement'} target="_blank"><button>Source Code</button></a>
                   </div>
                 </div>
                 <div className="project__data__item__right">
-                  <div className="img">
-                    <img src="./img/bg/bg1.jpg" alt="" />
+                  <div className="img border">
+                    <img src="./img/bg/farm.png" alt="" />
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="project__data__item  my-4 p-2">
-                <div className="project__data__item__left">
+                <div className="project__data__item__left pe-3">
                   <div className="top">
-                    <h4>Farm Mart: Online Marketplace</h4>
+                    <h4>OneUp: Professional Business Management Dashboard</h4>
                     <p>
                       Frontend projects are software development projects that
                       focus on building the user interface and user experience
@@ -72,13 +73,13 @@ function Projects() {
                     </p>
                   </div>
                   <div className="bottom">
-                    <button>View Live</button>
-                    <button>Source Code</button>
+                    <a href={'https://roaring-empanada-2b388d.netlify.app'} target="_blank"><button>View Live</button></a>
+                    <a href={'https://github.com/Jeevan1/oneups'} target="_blank"><button>Source Code</button></a>
                   </div>
                 </div>
                 <div className="project__data__item__right">
-                  <div className="img">
-                    <img src="./img/bg/bg1.jpg" alt="" />
+                  <div className="img border">
+                    <img src="./img/bg/oneup.png" alt="" />
                   </div>
                 </div>
               </div>

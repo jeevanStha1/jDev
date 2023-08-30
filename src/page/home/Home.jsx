@@ -14,6 +14,8 @@ import HireMe from "../../components/HireMe/HireMe";
 import Projects from "../../components/projects/Projects";
 import NewsLetter from "../../components/newsletter/NewsLetter";
 import Services from "../../components/services/Services";
+import { Link } from "react-router-dom";
+import Cv from "../../assets/cv/Jeevan-shrestha-resume.pdf";
 
 function Home() {
   
@@ -41,9 +43,12 @@ function Home() {
               <AiFillInstagram className="icon" />
             </div>
             <div className="section-1-top-4 ">
+              <Link to={Cv} download={'myResume'} target="_blank" rel="noreferrer" className=" text-decoration-none">
               <button className=" d-inline px-4 py-2 rounded-5 text-white border-2">
                 Download CV
               </button>
+              </Link>
+              
             </div>
           </div>
           <div className="section-1-bottom rounded-5">

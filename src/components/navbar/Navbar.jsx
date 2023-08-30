@@ -6,7 +6,13 @@ import "./navbar.scss";
 function Navbar({active,setActive}) {
   const [showMenu, setShowMenu] = useState(false);
   const [click, setClick] = useState(null);
-  const divref = useRef(null);
+  const divRef = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ]
 
   const activeLink = (e) => {
     const id = e.target;
@@ -25,19 +31,22 @@ function Navbar({active,setActive}) {
     "Blog",
     "Services",
   ];
-
-  useEffect(()=> {
+  useEffect(() => {
     const handleClickOutside = (event) => {
-      if(!divref.current || divref.current.contains(event.target)){
-        // setShowMenu(true);
+      const isClickOutside = divRef.every((divReff) => !divReff.current || !divReff.current.contains(event.target));
+
+      if (isClickOutside) {
+       setShowMenu(false)
       }
     };
+
     document.addEventListener('click', handleClickOutside);
-    return () =>
-    {
+
+    return () => {
       document.removeEventListener('click', handleClickOutside);
-  }
-  },[]);
+    };
+  }, []);
+
   return (
     <div className={active ? "Navbar active border-bottom" : "Navbar noActive"}>
       <div className="container w-75 m-auto row  justify-content-between align-items-center py-2">
@@ -64,7 +73,7 @@ function Navbar({active,setActive}) {
             </li>
           ))}
         </ul>
-        <div className="menu-icon ">
+        <div className="menu-icon " >
           {showMenu ? (
             <AiOutlineMenuFold
               onClick={() => setShowMenu(!showMenu)}
@@ -77,7 +86,7 @@ function Navbar({active,setActive}) {
             />
           )}
           {showMenu && (
-            <ul ref={divref}
+            <ul 
               className={`mobile-menu p-3 ${
                 active && "border-start border-bottom"
               }`}
@@ -85,7 +94,7 @@ function Navbar({active,setActive}) {
                 backgroundImage:
                   !active && "linear-gradient(to right, #013068,#043375)",
                 backgroundColor: active && "white",
-              }}
+              }} ref={divRef[1]}
             >
               {navlink.map((item, idx) => (
                 <li
