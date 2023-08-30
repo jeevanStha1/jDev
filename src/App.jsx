@@ -31,16 +31,20 @@ function App() {
     },
   ]);
   useEffect(() => {
-    // const isActive = () => {
-    //   ;
-    // };
-    // window.addEventListener("scroll", isActive);
-    return () => {
-      window.addEventListener("scroll", () => {
-        window.scrollY > 20 ? setActive(true) : setActive(false);
-      });
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setActive(true);
+      } else {
+        setActive(false);
+      }
     };
-  });
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); 
   return (
     <>
         <RouterProvider router={router} />
