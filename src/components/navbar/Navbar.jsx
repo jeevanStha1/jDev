@@ -34,7 +34,7 @@ function Navbar() {
     return () => {
       window.addEventListener("scroll", isActive);
     };
-  });
+  },[]);
   return (
     <div className={active ? "Navbar active border-bottom" : "Navbar noActive"}>
       <div className="container w-75 m-auto row  justify-content-between align-items-center py-2">
