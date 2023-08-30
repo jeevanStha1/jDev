@@ -9,8 +9,8 @@ function App() {
   const Layout = () => {
     return (
       <div className="app">
-        <Navbar />
         <Outlet />
+        <Navbar />
         <Footer />
       </div>
     );
