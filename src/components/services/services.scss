@@ -1,5 +1,9 @@
 .services {
     &__section {
+        .swiper-slide{
+            display: flex;
+            justify-content: center;
+        }
         &__item {
             height: 290px;
             width: 250px;

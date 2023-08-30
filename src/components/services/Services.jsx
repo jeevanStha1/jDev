@@ -44,11 +44,11 @@ function Services() {
               },
             }}
             modules={[Pagination]}
-            className="mySwiper row m-auto px-4"
+            className="mySwiper"
           >
             {services.map((item,idx) => (
                 <SwiperSlide>
-                    <div className="services__section__item text-center bg-white p-3 mx-2 my-5  d-flex flex-column gap-2 align-items-center border" key={idx}>
+                    <div className="services__section__item text-center bg-white p-3  my-5  d-flex flex-column gap-2 align-items-center border" key={idx}>
                         <span className=" text-info">{item.icon}</span>
                         <p className="title fs-5 fw-bold">{item.title}</p>
                         <p className="desc fw-medium">{item.desc}</p>
