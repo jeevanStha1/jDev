@@ -9,7 +9,7 @@ function App() {
   const Layout = () => {
     return (
       <div className="app">
-        {/* <Outlet /> */}
+        <Outlet />
         <Navbar />
         <Footer />
       </div>
