@@ -31,21 +31,21 @@ function Navbar({active,setActive}) {
     "Blog",
     "Services",
   ];
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const isClickOutside = divRef.every((divReff) => !divReff.current || !divReff.current.contains(event.target));
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     const isClickOutside = divRef.every((divReff) => !divReff.current || !divReff.current.contains(event.target));
 
-      if (isClickOutside) {
-       setShowMenu(false)
-      }
-    };
+  //     if (isClickOutside) {
+  //      setShowMenu(false)
+  //     }
+  //   };
 
-    document.addEventListener('click', handleClickOutside);
+  //   document.addEventListener('click', handleClickOutside);
 
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener('click', handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <div className={active ? "Navbar active border-bottom" : "Navbar noActive"}>
@@ -94,7 +94,7 @@ function Navbar({active,setActive}) {
                 backgroundImage:
                   !active && "linear-gradient(to right, #013068,#043375)",
                 backgroundColor: active && "white",
-              }} ref={divRef[1]}
+              }}
             >
               {navlink.map((item, idx) => (
                 <li
