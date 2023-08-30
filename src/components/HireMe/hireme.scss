@@ -1,5 +1,5 @@
 .hireMe{
-    background-image: url("./img/bg/bg2.jpg");
+    background-image: url("../../../public/img/bg/bg2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,7 +11,7 @@
         padding: 10px 22px;
         background-color: transparent;
         &:hover{
-            background-color: white;
+            background-color: rgb(22, 12, 12);
             color: black;
         }
     }
