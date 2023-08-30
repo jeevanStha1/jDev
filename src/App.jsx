@@ -9,7 +9,7 @@ function App() {
   const Layout = () => {
     return (
       <div className="app">
-        {/* <Outlet /> */}
+        <Outlet />
         <Navbar />
         <Footer />
       </div>
@@ -30,12 +30,7 @@ function App() {
   ]);
   return (
     <>
-      <div>
-        {/* <RouterProvider router={router} /> */}
-        <Navbar />
-        <Home />
-        <Footer />
-      </div>
+        <RouterProvider router={router} />
     </>
   );
 }
