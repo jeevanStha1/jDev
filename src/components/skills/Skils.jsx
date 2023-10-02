@@ -46,6 +46,16 @@ function Skils() {
       name: "react",
       completed: 50,
     },
+    {
+      id: 8,
+      name: "useContext-api",
+      completed: 50,
+    },
+    {
+      id: 8,
+      name: "redux-toolkit",
+      completed: 50,
+    },
   ];
   return (
     <div className="skils">
