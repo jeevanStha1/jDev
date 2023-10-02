@@ -84,6 +84,29 @@ function Projects() {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="project__data__item  my-4 p-2">
+                <div className="project__data__item__left pe-3">
+                  <div className="top">
+                    <h4>GEOSTORE: e-Commerce Platform</h4>
+                    <p>
+                      Frontend projects are software development projects that
+                      focus on building the user interface and user experience
+                      of a website or application.
+                    </p>
+                  </div>
+                  <div className="bottom">
+                    <a href={'https://2tvz84-5173.csb.app/'} target="_blank"><button>View Live</button></a>
+                    <a href={'https://github.com/Jeevan1/geostore'} target="_blank"><button>Source Code</button></a>
+                  </div>
+                </div>
+                <div className="project__data__item__right">
+                  <div className="img border">
+                    <img src="./img/bg/geostore.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
