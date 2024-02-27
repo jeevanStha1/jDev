@@ -11,7 +11,14 @@
 
             &__left {
                 width: 30%;
-
+                .top{
+                    p{
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 5;
+                    }
+                }
                 .bottom {
                     display: flex;
                     gap: 10px;
