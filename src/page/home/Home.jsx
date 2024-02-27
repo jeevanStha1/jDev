@@ -38,7 +38,7 @@ function Home() {
             <div className="section-1-top-3 d-flex gap-3">
               <TbBrandFacebookFilled className="icon" />
               <AiOutlineGooglePlus className="icon" />
-              <BiLogoLinkedin className="icon" />
+              <Link to ='www.linkedin.com/in/jeevan-shrestha-34a3b01a5'></Link><BiLogoLinkedin className="icon" /></Link>
               <BsTwitter className="icon" />
               <AiFillInstagram className="icon" />
             </div>
