@@ -46,11 +46,9 @@ function About() {
           <div className="aboutMe-2-2 col-lg-7 col-sm-12">
             <h2>About Me</h2>
             <p className="opacity-80">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Similique inventore rem, non eligendi itaque veniam adipisci harum
-              ab alias vel sint facere. Doloremque aut quibusdam repellat earum
-              exercitationem error iste illo unde fugit temporibus laudantium
-              vel veritatis enim, cumque vero!
+              Passionate self-taught developer with four months of internship experience, dedicated to crafting
+visually appealing and functional user interfaces. Seeking opportunities to apply my front-end
+skills in a dynamic organization, with a focus on innovative solutions and continuous learning.
             </p>
             <div className="status">
               <div className="status-1">
