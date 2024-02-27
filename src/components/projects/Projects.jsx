@@ -44,9 +44,8 @@ function Projects() {
                   <div className="top">
                     <h4>Farm Mart: Online Marketplace</h4>
                     <p>
-                      Frontend projects are software development projects that
-                      focus on building the user interface and user experience
-                      of a website or application.
+                      
+FARM MART: An online platform replacing manual farming systems with digital solutions. It offers tailored advice, connects farmers with consumers, and streamlines processes for improved efficiency and productivity in agriculture. Accessible from mobile or computer.
                     </p>
                   </div>
                   <div className="bottom">
@@ -67,9 +66,8 @@ function Projects() {
                   <div className="top">
                     <h4>OneUp: Professional Business Management Dashboard</h4>
                     <p>
-                      Frontend projects are software development projects that
-                      focus on building the user interface and user experience
-                      of a website or application.
+                      
+OneUp is a user-friendly platform that simplifies business management by consolidating financial information, operational data, and decision-making tools into one intuitive interface. 
                     </p>
                   </div>
                   <div className="bottom">
@@ -90,9 +88,7 @@ function Projects() {
                   <div className="top">
                     <h4>GEOSTORE: e-Commerce Platform</h4>
                     <p>
-                      Frontend projects are software development projects that
-                      focus on building the user interface and user experience
-                      of a website or application.
+                      GEOSTORE is a dynamic e-commerce platform built using React, offering users a seamless online shopping experience. With a modern and intuitive interface, GEOSTORE allows customers to browse through a wide range of products, add items to their cart, and securely complete transactions. Leveraging React's flexibility and efficiency, GEOSTORE delivers a responsive and engaging shopping environment for both buyers and sellers.
                     </p>
                   </div>
                   <div className="bottom">
