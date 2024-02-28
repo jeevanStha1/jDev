@@ -29,22 +29,11 @@ function Education() {
   const experience = [
     {
       id: 1,
-      name: "I.T.U.S",
-      faculty: "Author",
-      duration: "2018 - current",
+      name: "Frontend Developer at SUGA Inc.",
+      faculty: "Intern",
+      duration: "May 2023 - Sep 2023",
     },
-    {
-      id: 2,
-      name: "microsoft",
-      faculty: "Admin",
-      duration: "2015 - 2017",
-    },
-    {
-      id: 3,
-      name: "META company",
-      faculty: "manager",
-      duration: "2012 - 2014",
-    },
+    
   ];
   return (
     <div className="education" id="Education">
