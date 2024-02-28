@@ -23,7 +23,7 @@ function Education() {
       id: 3,
       name: "Shree jana jagriti secondary school",
       faculty: "SLC",
-      duration: "2004 - 2014",
+      duration: "2004 - pppp2014",
     },
   ];
   const experience = [
